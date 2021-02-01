@@ -1,4 +1,4 @@
-(ns opobot.slack.commands.hello
+(ns opobot.commands.hello
   (:require
    [opobot.commands.core :refer [def-command]]
    [opobot.slack.rtm.connection :as rtm]))
