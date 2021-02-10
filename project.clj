@@ -7,7 +7,8 @@
   [[org.clojure/clojure "1.10.0"]
    [cheshire "5.10.0"]
    [clj-http "3.10.3"]
-   [cristian/gniazdo "0.3.2"]]
+   [cristian/gniazdo "0.3.2"]
+   [ring/ring-codec "1.1.2"]]
   :main ^:skip-aot opobot.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

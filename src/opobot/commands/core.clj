@@ -1,24 +1,38 @@
-(ns opobot.commands.core)
+(ns opobot.commands.core
+  (:require
+   [clojure.string :as str]
+   [opobot.slack.rtm.connection :as rtm]))
 
-(def handlers [])
+(def commands [])
 
-(defn find-handler [text]
-  (let [handler (first
-                 (filter
-                  (fn [handler]
-                    (let [re (get handler 0)
-                          fn (get handler 1)]
-                      (re-find re text)))
-                  handlers))]
-    (get handler 1)))
+(defn add-command [re fn]
+  (def commands (conj commands {:re re :fn fn})))
 
-(defn register-handler [re fn]
-  (def handlers (conj handlers [re fn])))
+(defn find-command [text]
+  (first
+   (filter
+    (fn [command]
+      (.find (doto (re-matcher (:re command) text) (.find)) 0))
+    commands)))
 
-(defmacro def-command [name args body]
-  (let [name (condp
-                 =
-                 (type name)
-               clojure.lang.Symbol (re-pattern (str "^" (.toString name) "\\b"))
-               java.util.regex.Pattern name)]
-    `(register-handler ~name (fn ~args ~body))))
+(defn invoke [channel text]
+  (let [command (find-command text)]
+    (if command
+      (let [re (:re command)
+            fn (:fn command)]
+        (fn channel (doto (re-matcher re text) (.find))))
+      (rtm/send-message channel "what"))))
+
+(defn run [msg]
+  (let [channel (get msg "channel")
+        text (get msg "text")]
+    (when (re-find (re-pattern (str "^" rtm/name "\\b")) text)
+      (invoke
+       channel
+       (str/replace
+        text
+        (re-pattern (str "^" rtm/name "\\b\\s*"))
+        "")))))
+
+(defmacro def-command [re args body]
+  `(add-command ~re (fn ~args ~body)))
