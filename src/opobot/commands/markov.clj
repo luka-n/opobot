@@ -8,3 +8,7 @@
   (let [starter (.group matches "starter")
         sentence (markov/sentence starter)]
     (rtm/send-message channel sentence)))
+
+(def-command #"^(what is your )?wisdom" [channel _]
+  (let [sentence (markov/sentence)]
+    (rtm/send-message channel sentence)))
