@@ -6,7 +6,8 @@
 (def commands [])
 
 (defn add-command [re fn]
-  (def commands (conj commands {:re re :fn fn})))
+  (def commands
+    (conj commands {:re (re-pattern (str re "($|\\s)")) :fn fn})))
 
 (defn find-command [text]
   (first
