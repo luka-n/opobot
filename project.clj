@@ -7,7 +7,9 @@
   [[org.clojure/clojure "1.10.0"]
    [cheshire "5.10.0"]
    [clj-http "3.10.3"]
+   [clojail "1.0.6"]
    [cristian/gniazdo "0.3.2"]
+   [hickory "0.7.1"]
    [ring/ring-codec "1.1.2"]]
   :main ^:skip-aot opobot.core
   :target-path "target/%s"

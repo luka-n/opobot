@@ -7,6 +7,10 @@
    [opobot.commands.hello]
    [opobot.commands.image]
    [opobot.commands.markov]
+   [opobot.commands.muca]
+   [opobot.commands.reddit]
+   [opobot.commands.run]
+   [opobot.commands.youtube]
    [opobot.hooks.core :as hooks]
    [opobot.hooks.markov]
    [opobot.slack.rtm.connection :as rtm]))
