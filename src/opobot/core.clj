@@ -2,10 +2,10 @@
   (:gen-class)
   (:require
    [cheshire.core :as json]
-   [opobot.commands.cat]
    [opobot.commands.core :as commands]
    [opobot.commands.hello]
    [opobot.commands.image]
+   [opobot.commands.imgur]
    [opobot.commands.markov]
    [opobot.commands.muca]
    [opobot.commands.reddit]
