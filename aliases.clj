@@ -1,13 +1,15 @@
 {":b:inky"          "imgur gYWlrwp"
- ":bongo_silence:"  "imgur HJAUs1m"
- ":opomuc:"         "imgur 5m8iBZq"
  "binky"            "imgur gYWlrwp"
- "cefur"            "imgur 5m8iBZq"
- "ciri"             "imgur FLOxSG3"
- "cric"             "imgur FLOxSG3"
- "cricek"           "imgur FLOxSG3"
  "ink"              "imgur gYWlrwp"
  "inky"             "imgur gYWlrwp"
+ "tripod"           "imgur gYWlrwp"
+
+ ":bongo_silence:"  "imgur HJAUs1m"
+ "silence"          "imgur HJAUs1m"
+ "silenec"          "imgur HJAUs1m"
+
+ ":opomuc:"         "imgur 5m8iBZq"
+ "cefur"            "imgur 5m8iBZq"
  "muc"              "imgur 5m8iBZq"
  "muuc"             "imgur 5m8iBZq"
  "muuuc"            "imgur 5m8iBZq"
@@ -19,10 +21,12 @@
  "muuuuuuuuuc"      "imgur 5m8iBZq"
  "muuuuuuuuuuc"     "imgur 5m8iBZq"
  "muuuuuuuuuuuc"    "imgur 5m8iBZq"
- "nichi"            "imgur FLOxSG3"
  "opomuc"           "imgur 5m8iBZq"
+
+ "ciri"             "imgur FLOxSG3"
+ "cric"             "imgur FLOxSG3"
+ "cricek"           "imgur FLOxSG3"
+ "nichi"            "imgur FLOxSG3"
+
  "satan"            "imgur nVCMPIl"
- "silence"          "imgur HJAUs1m"
- "silenec"          "imgur HJAUs1m"
- "stan"             "imgur nVCMPIl"
- "tripod"           "imgur gYWlrwp"}
+ "stan"             "imgur nVCMPIl"}
